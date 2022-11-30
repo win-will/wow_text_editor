@@ -23,8 +23,8 @@ module.exports = () => {
         title: 'WOW Text Editor'
       }),
       new WebpackPwaManifest({
-        name: 'TextEditor',
-        short_name: 'TextEditor',
+        name: 'JATE',
+        short_name: 'JATE',
         description: 'Edit text in the browser',
         background_color: '#7eb4e2',
         theme_color: '#7eb4e2',
@@ -32,15 +32,15 @@ module.exports = () => {
         publicPath: './',
         icons: [
           {
-            src: path.resolve('assets/images/logo.png'),
+            src: path.resolve('./src/images/logo.png'),
             sizes: [96, 128, 192, 256, 384, 512],
             destination: path.join('assets', 'icons'),
           },
         ],
       }),
       new InjectManifest({
-        swSrc: './src/sw.js',
-        swDest: 'service-worker.js',
+        swSrc: './src-sw.js',
+        swDest: 'src-sw.js',
       }),
     ],
 
